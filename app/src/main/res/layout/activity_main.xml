@@ -30,13 +30,12 @@
                 android:text="AM"
                 android:textAlignment="center" />
 
-            <EditText
+            <Button
                 android:id="@+id/datum"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:text="Datum" />
 
             <Spinner
                 android:id="@+id/ausgabenEinnahmen"
@@ -60,13 +59,12 @@
                 android:text="VON"
                 android:textAlignment="center" />
 
-            <EditText
+            <Button
                 android:id="@+id/euro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:text="Euro" />
 
             <TextView
                 android:id="@+id/euroFor"

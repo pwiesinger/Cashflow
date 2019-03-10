@@ -1,6 +1,8 @@
 package com.lab73.cashflow;
 
 import android.content.Context;
+import android.widget.ArrayAdapter;
+import android.widget.SpinnerAdapter;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -57,5 +59,10 @@ public class FileManager {
         } catch (IOException io) {
             io.printStackTrace();
         }
+    }
+
+    public static ArrayAdapter getEinnahmeAusgabeAdapter(Context context) {
+        String[] array = new String[]{"- Ausgaben", "+ Einnahmen"};
+        return new ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, array);
     }
 }
