@@ -6,11 +6,16 @@ public class Logic {
 
     public Entry currentEntry;
 
-    public void addEntryToStore(Context context) {
+    public boolean addEntryToStore(Context context) {
 
+        return false;
     }
 
-    public void updateDateOfEntry(int year, int month, int day) {
+    public boolean updateDateOfEntry(int year, int month, int day) {
+        return false;
+    }
+
+    public void setPickerValues(int a, int a1) {
 
     }
 }
