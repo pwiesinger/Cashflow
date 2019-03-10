@@ -65,4 +65,9 @@ public class FileManager {
         String[] array = new String[]{"- Ausgaben", "+ Einnahmen"};
         return new ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, array);
     }
+
+    public static ArrayAdapter getVerwendungszweckAdapter(Context context) {
+        List<String> list = getVerwendungszwecke(context);
+        return new ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, list.toArray());
+    }
 }

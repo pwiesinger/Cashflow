@@ -57,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
         ok.setOnClickListener(view -> okButtonPressed(view));
         ausgabenEinnahmen.setAdapter(FileManager.getEinnahmeAusgabeAdapter(getApplicationContext()));
+        verwendungszwecke.setAdapter(FileManager.getVerwendungszweckAdapter(getApplicationContext()));
 
+        
         // configuring date picker
         DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
