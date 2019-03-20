@@ -2,34 +2,20 @@ package com.lab73.cashflow;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.FrameLayout;
-import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.NumberPicker;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Calendar;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private Spinner ausgabenEinnahmen;
     private Button datum;
     private Button numberPicker;
-    private GridView gridView;
+    private ListView listView;
     private TextView cash;
+    private TextView customVerwendung;
 
     private Logic logic = new Logic();
 
@@ -52,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
         ausgabenEinnahmen = findViewById(R.id.ausgabenEinnahmen);
         datum = findViewById(R.id.datum);
         numberPicker = findViewById(R.id.euro);
-        gridView = findViewById(R.id.gridView);
+        listView = findViewById(R.id.listView);
         cash = findViewById(R.id.cash);
+        customVerwendung = findViewById(R.id.customVerwendung);
 
         ok.setOnClickListener(view -> okButtonPressed(view));
         ausgabenEinnahmen.setAdapter(FileManager.getEinnahmeAusgabeAdapter(getApplicationContext()));
